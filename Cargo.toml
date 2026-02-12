@@ -1,11 +1,11 @@
 [package]
 name = "sqlite_skim"
 version = "0.1.0"
-edition = "2021"
+edition = "2024"
 
 [dependencies]
 rusqlite = { version = "0.38.0", features = ["loadable_extension", "functions"] }
-skim = "2.0.2"
+skim = "2"
 thiserror = "2.0.18"
 
 [lib]
