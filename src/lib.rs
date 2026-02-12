@@ -2,7 +2,7 @@ use rusqlite::{Connection, Result, ffi};
 use rusqlite::functions::{FunctionFlags, Context};
 use skim::fuzzy_matcher::FuzzyMatcher;
 use skim::fuzzy_matcher::skim::SkimMatcherV2;
-use rusqlite::types::{ToSqlOutput, Value};
+// use rusqlite::types::{ToSqlOutput, Value};
 use std::os::raw::{c_char, c_int};
 
 
