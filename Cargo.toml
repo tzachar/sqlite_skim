@@ -1,0 +1,13 @@
+[package]
+name = "sqlite_skim"
+version = "0.1.0"
+edition = "2021"
+
+[dependencies]
+rusqlite = { version = "0.38.0", features = ["loadable_extension", "functions"] }
+skim = "2.0.2"
+thiserror = "2.0.18"
+
+[lib]
+name = "sqlite_skim"
+crate-type = ["cdylib"]
