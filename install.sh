@@ -5,7 +5,7 @@ echo "--- Starting sqlite_skim installation script ---"
 
 # 1. Compile the Rust project
 echo "[1/4] Compiling the sqlite_skim extension..."
-cargo +nightly build --release
+cargo +nightly-2026-02-11 build --release
 if [ $? -ne 0 ]; then
     echo "Error: Compilation failed." >&2
     exit 1

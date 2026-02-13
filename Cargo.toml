@@ -5,7 +5,7 @@ edition = "2024"
 
 [dependencies]
 rusqlite = { version = "0.38.0", features = ["loadable_extension", "functions"] }
-skim = "2"
+skim = { version = "3.1.1", features = ["nightly-frizbee"]}
 thiserror = "2.0.18"
 
 [lib]

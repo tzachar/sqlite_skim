@@ -27,7 +27,7 @@ To build the `sqlite_skim` extension, follow these steps:
 2.  **Set the Rust toolchain to nightly:**
     This project requires the nightly Rust toolchain due to dependencies within `skim-rs`.
     ```bash
-    rustup override set nightly
+    rustup override set nightly-2026-02-11
     ```
 
 3.  **Build in release mode:**
