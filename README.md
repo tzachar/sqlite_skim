@@ -19,10 +19,10 @@ To build the `sqlite_skim` extension, follow these steps:
 
 1.  **Clone the repository:**
     ```bash
-    git clone https://github.com/your-repo/sqlite_skim.git
+    git clone https://github.com/tzachar/sqlite_skim.git
     cd sqlite_skim/sqlite_skim
     ```
-    (Replace `https://github.com/your-repo/sqlite_skim.git` with the actual repository URL once available)
+    (Replace `https://github.com/tzachar/sqlite_skim.git` with the actual repository URL once available)
 
 2.  **Set the Rust toolchain to nightly:**
     This project requires the nightly Rust toolchain due to dependencies within `skim-rs`.
