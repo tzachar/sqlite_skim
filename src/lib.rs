@@ -1,8 +1,8 @@
 use rusqlite::{Connection, Result, ffi};
 use rusqlite::functions::{FunctionFlags, Context};
 use skim::fuzzy_matcher::FuzzyMatcher;
-use skim::fuzzy_matcher::skim::SkimMatcherV2;
-// use rusqlite::types::{ToSqlOutput, Value};
+use skim::fuzzy_matcher::frizbee::FrizbeeMatcher;
+// use skim::fuzzy_matcher::skim::SkimMatcherV2;
 use std::os::raw::{c_char, c_int};
 
 // The main entry point for the SQLite extension
@@ -35,7 +35,8 @@ fn skim_score(ctx: &Context) -> Result<i64> {
     let query = ctx.get::<String>(0)?;
     let choice = ctx.get::<String>(1)?;
 
-    let matcher = SkimMatcherV2::default();
+    // let matcher = SkimMatcherV2::default();
+    let matcher = FrizbeeMatcher::default();
     let score = matcher.fuzzy_match(&choice, &query).unwrap_or(0);
 
     Ok(score)
