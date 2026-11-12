@@ -35,6 +35,10 @@ fn skim_score(ctx: &Context) -> Result<i64> {
     let query = ctx.get::<String>(0)?;
     let choice = ctx.get::<String>(1)?;
 
+    if query == "" {
+        return Ok(-1);
+    }
+
     // let matcher = SkimMatcherV2::default();
     let matcher = FrizbeeMatcher::default();
     let score = matcher.fuzzy_match(&choice, &query).unwrap_or(0);
